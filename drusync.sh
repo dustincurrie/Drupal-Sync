@@ -45,12 +45,12 @@ do
 done
 
 
-REMOTEFILE="/home/$REMOTESSHUSER/mysqldump.sql"
+REMOTEFILE="~/mysqldump.sql"
 # path this script will use to save it local working file - should be ok on any linux computer
 LOCALFILE="/tmp/mysqldump.sql"
 
-echo "Updating SVN at $PROJECTROOT ..."
-svn update $PROJECTROOT
+echo "Updating GIT"
+git pull
 
 REMOTEFILE_GZ="$REMOTEFILE.gz"
 LOCALFILE_GZ="$LOCALFILE.gz"
